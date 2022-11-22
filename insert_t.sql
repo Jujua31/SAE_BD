@@ -46,8 +46,40 @@ INSERT INTO EMPLACEMENT (IDZoo, codeEmplacement, situation, codeType) VALUES
 (3, "E46", 'Secteur Aquarium Sous', 2),
 (1, "E89", 'Secteur Volière', 3);
 
-INSERT INTO PRESENT (codeEmplacement, IdZone, stock) VALUES
-("E12", "Z001", 15),
-("E45", "Z002", 10),
-("E46", "Z002", 10),
-("E89", "Z003", 5);
+INSERT INTO PRESENT (codeEmplacement, IdZone, PopZone) VALUES
+("E12", "Z001", 20),
+("E45", "Z002", 50),
+("E46", "Z002", 6),
+("E89", "Z003", 2);
+
+INSERT INTO POSSEDE (IDZoo, IdAliment, stock) VALUES
+("Z001", 1, 10),
+("Z001", 2, 10),
+("Z001", 3, 10),
+("Z002", 1, 10),
+("Z002", 2, 10),
+("Z002", 6, 10),
+("Z003", 1, 10),
+("Z003", 2, 10),
+("Z003", 6, 10);
+
+INSERT INTO CONSOMME (codeEspece, IdAliment, quantite) VALUES
+("E12", 1, 16),
+("E12", 3, 7),
+("E45", 1, 45),
+("E45", 2, 32),
+("E89", 1, 2),
+("E89", 2, 50);
+
+INSERT INTO ZOOLOGIQUE (IDZoo, EquipeRecherche) VALUES
+("Z001", 'Equipe Recherche 1'),
+("Z002", 'Equipe Recherche 2'),
+("Z003", 'Equipe Recherche 3');
+
+INSERT INTO SUBSTITUE (IdAliment, IdSubstitue, TauxRemplacement) VALUES
+(1, 2, 50),
+(1, 3, 20),
+(2, 1, 10),
+(2, 3, 6),
+(3, 1, 4),
+(3, 2, 1);
